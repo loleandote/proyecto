@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_6kMZEC-2EemExtAaCwr-_A" name="NewModel">
+  <packageImport xmi:id="_FJNP8C-3EemExtAaCwr-_A">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packageImport xmi:id="_P-sy0C-3EemExtAaCwr-_A">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_AdcrcC-3EemExtAaCwr-_A" name="aula" visibility="public">
+    <ownedAttribute xmi:id="_DbQgYC-3EemExtAaCwr-_A" name="codigo_aula">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Dc44EC-3EemExtAaCwr-_A" name="longitud">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_DeezgC-3EemExtAaCwr-_A" name="ocupada">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_TLk-gC-3EemExtAaCwr-_A" name="musica" visibility="public">
+    <generalization xmi:id="_hYyEEC-3EemExtAaCwr-_A" general="_AdcrcC-3EemExtAaCwr-_A"/>
+    <ownedAttribute xmi:id="_WTKagC-3EemExtAaCwr-_A" name="piano">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_UYVskC-3EemExtAaCwr-_A" name="informatica" visibility="public">
+    <generalization xmi:id="_g-AMkC-3EemExtAaCwr-_A" general="_AdcrcC-3EemExtAaCwr-_A"/>
+    <ownedAttribute xmi:id="_Z0UNEC-3EemExtAaCwr-_A" name="nº ordenadores">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Z1yzwC-3EemExtAaCwr-_A" name="capacidad">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_h0yDkC-3EemExtAaCwr-_A" name="Profesor" visibility="public">
+    <ownedAttribute xmi:id="_jcXFYC-3EemExtAaCwr-_A" name="DNI">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_jdwMgC-3EemExtAaCwr-_A" name="nombre">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_EGGXsC-4EemExtAaCwr-_A" name="alta"/>
+    <ownedOperation xmi:id="_EU_vUC-4EemExtAaCwr-_A" name="baja"/>
+    <ownedOperation xmi:id="_Ei-g8C-4EemExtAaCwr-_A" name="modificar"/>
+    <ownedOperation xmi:id="_Iy8hUC-4EemExtAaCwr-_A" name="getNombre"/>
+    <ownedOperation xmi:id="_JBR4QC-4EemExtAaCwr-_A" name="setNombre"/>
+    <ownedOperation xmi:id="_JQKo0C-4EemExtAaCwr-_A" name="getDNI"/>
+    <ownedOperation xmi:id="_JnbSQC-4EemExtAaCwr-_A" name="setDNI"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_rqT-QC-3EemExtAaCwr-_A" name="Reserva" visibility="public">
+    <ownedAttribute xmi:id="_wjQDIC-3EemExtAaCwr-_A" name="id">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_wk1XgC-3EemExtAaCwr-_A" name="fecha">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_17mn4C-3EemExtAaCwr-_A" name="ocupada">
+      <ownedParameter xmi:id="_4l0LYC-3EemExtAaCwr-_A" name="codigo_aula"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_2L_0UC-3EemExtAaCwr-_A" name="reservar">
+      <ownedParameter xmi:id="_-ByE0C-3EemExtAaCwr-_A" name="codigo"/>
+      <ownedParameter xmi:id="_-TtiUC-3EemExtAaCwr-_A" name="DNI"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_uE9bwC-3EemExtAaCwr-_A" name="profesorsToReservas" memberEnd="_uE9bwS-3EemExtAaCwr-_A _uE9bxC-3EemExtAaCwr-_A" navigableOwnedEnd="_uE9bxC-3EemExtAaCwr-_A">
+    <ownedEnd xmi:id="_uE9bwS-3EemExtAaCwr-_A" name="profesors" type="_h0yDkC-3EemExtAaCwr-_A" association="_uE9bwC-3EemExtAaCwr-_A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uE9bwi-3EemExtAaCwr-_A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uE9bwy-3EemExtAaCwr-_A" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_uE9bxC-3EemExtAaCwr-_A" name="reservas" type="_rqT-QC-3EemExtAaCwr-_A" aggregation="shared" association="_uE9bwC-3EemExtAaCwr-_A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uE9bxS-3EemExtAaCwr-_A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uE-C0C-3EemExtAaCwr-_A" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_uXPekC-3EemExtAaCwr-_A" name="aulasToReservas" memberEnd="_uXPekS-3EemExtAaCwr-_A _uXPelC-3EemExtAaCwr-_A" navigableOwnedEnd="_uXPelC-3EemExtAaCwr-_A">
+    <ownedEnd xmi:id="_uXPekS-3EemExtAaCwr-_A" name="aulas" type="_AdcrcC-3EemExtAaCwr-_A" association="_uXPekC-3EemExtAaCwr-_A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uXPeki-3EemExtAaCwr-_A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uXPeky-3EemExtAaCwr-_A" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_uXPelC-3EemExtAaCwr-_A" name="reservas" type="_rqT-QC-3EemExtAaCwr-_A" aggregation="shared" association="_uXPekC-3EemExtAaCwr-_A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uXPelS-3EemExtAaCwr-_A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uXPeli-3EemExtAaCwr-_A" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_Sax-QC-4EemExtAaCwr-_A" name="Administrador">
+    <eAnnotations xmi:id="_SaylUC-4EemExtAaCwr-_A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details xmi:id="_SaylUS-4EemExtAaCwr-_A" key="Human"/>
+    </eAnnotations>
+    <generalization xmi:id="_iT1hoC-4EemExtAaCwr-_A" general="_UBbzAC-4EemExtAaCwr-_A"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_UBbzAC-4EemExtAaCwr-_A" name="Profesor">
+    <eAnnotations xmi:id="_UBbzAS-4EemExtAaCwr-_A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details xmi:id="_UBbzAi-4EemExtAaCwr-_A" key="Human"/>
+    </eAnnotations>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_WWSxkC-4EemExtAaCwr-_A" name="Alta"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_XIkjEC-4EemExtAaCwr-_A" name="Baja"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_YLtbEC-4EemExtAaCwr-_A" name="Modificacion"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_aTqmEC-4EemExtAaCwr-_A" name="Reservar"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_cAsIkC-4EemExtAaCwr-_A" memberEnd="_cAsvoC-4EemExtAaCwr-_A _cAsvoS-4EemExtAaCwr-_A">
+    <ownedEnd xmi:id="_cAsvoC-4EemExtAaCwr-_A" type="_UBbzAC-4EemExtAaCwr-_A" association="_cAsIkC-4EemExtAaCwr-_A"/>
+    <ownedEnd xmi:id="_cAsvoS-4EemExtAaCwr-_A" type="_aTqmEC-4EemExtAaCwr-_A" association="_cAsIkC-4EemExtAaCwr-_A"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_crgAIC-4EemExtAaCwr-_A" memberEnd="_crgAIS-4EemExtAaCwr-_A _crgAIi-4EemExtAaCwr-_A">
+    <ownedEnd xmi:id="_crgAIS-4EemExtAaCwr-_A" type="_YLtbEC-4EemExtAaCwr-_A" association="_crgAIC-4EemExtAaCwr-_A"/>
+    <ownedEnd xmi:id="_crgAIi-4EemExtAaCwr-_A" type="_Sax-QC-4EemExtAaCwr-_A" association="_crgAIC-4EemExtAaCwr-_A"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_c-t3EC-4EemExtAaCwr-_A" memberEnd="_c-t3ES-4EemExtAaCwr-_A _c-t3Ei-4EemExtAaCwr-_A">
+    <ownedEnd xmi:id="_c-t3ES-4EemExtAaCwr-_A" type="_XIkjEC-4EemExtAaCwr-_A" association="_c-t3EC-4EemExtAaCwr-_A"/>
+    <ownedEnd xmi:id="_c-t3Ei-4EemExtAaCwr-_A" type="_Sax-QC-4EemExtAaCwr-_A" association="_c-t3EC-4EemExtAaCwr-_A"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_dz-rIC-4EemExtAaCwr-_A" memberEnd="_dz-rIS-4EemExtAaCwr-_A _dz-rIi-4EemExtAaCwr-_A">
+    <ownedEnd xmi:id="_dz-rIS-4EemExtAaCwr-_A" type="_WWSxkC-4EemExtAaCwr-_A" association="_dz-rIC-4EemExtAaCwr-_A"/>
+    <ownedEnd xmi:id="_dz-rIi-4EemExtAaCwr-_A" type="_Sax-QC-4EemExtAaCwr-_A" association="_dz-rIC-4EemExtAaCwr-_A"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_jwCZ4C-4EemExtAaCwr-_A" name="NewModel">
+    <ownedAttribute xmi:id="_mZnEMC-4EemExtAaCwr-_A" name="Profesor" type="_UBbzAC-4EemExtAaCwr-_A"/>
+    <ownedAttribute xmi:id="_tnCUMC-4EemExtAaCwr-_A" name="Actor3" type="_xOSHsC-4EemExtAaCwr-_A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xNpOgC-4EemExtAaCwr-_A" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xNp1kC-4EemExtAaCwr-_A" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_1avhEC-4EemExtAaCwr-_A" name="Profesor" type="_h0yDkC-3EemExtAaCwr-_A"/>
+    <ownedAttribute xmi:id="_FKk3AC-5EemExtAaCwr-_A" name="Reserva" type="_rqT-QC-3EemExtAaCwr-_A"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_6rGAYi-4EemExtAaCwr-_A" name="Operation_1"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_8bm7wi-4EemExtAaCwr-_A" name="Operation_2"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_DUYKYS-5EemExtAaCwr-_A" name="getDNI"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_G6IwIC-5EemExtAaCwr-_A" name="ocupada"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KO3QQS-5EemExtAaCwr-_A" name="reservar"/>
+    <lifeline xmi:id="_mZnEMS-4EemExtAaCwr-_A" name="Profesor" represents="_mZnEMC-4EemExtAaCwr-_A" coveredBy="_6rGAZC-4EemExtAaCwr-_A _6rGncS-4EemExtAaCwr-_A _8bm7xC-4EemExtAaCwr-_A _8bm7yC-4EemExtAaCwr-_A"/>
+    <lifeline xmi:id="_tnBtIS-4EemExtAaCwr-_A" name="Interfaz" represents="_tnCUMC-4EemExtAaCwr-_A" coveredBy="_6rGAZS-4EemExtAaCwr-_A _6rGncC-4EemExtAaCwr-_A _6rGAZi-4EemExtAaCwr-_A _8bm7xS-4EemExtAaCwr-_A _8bm7xy-4EemExtAaCwr-_A _8bm7xi-4EemExtAaCwr-_A _DUYKYy-5EemExtAaCwr-_A _DUYKZy-5EemExtAaCwr-_A _G6IwIi-5EemExtAaCwr-_A _G6IwJi-5EemExtAaCwr-_A _KO3QQy-5EemExtAaCwr-_A _KO3QRy-5EemExtAaCwr-_A"/>
+    <lifeline xmi:id="_1avhES-4EemExtAaCwr-_A" name="Profesor" represents="_1avhEC-4EemExtAaCwr-_A" coveredBy="_DUYKZC-5EemExtAaCwr-_A _DUYKZi-5EemExtAaCwr-_A _DUYKZS-5EemExtAaCwr-_A"/>
+    <lifeline xmi:id="_FKk3AS-5EemExtAaCwr-_A" name="Reserva" represents="_FKk3AC-5EemExtAaCwr-_A" coveredBy="_G6IwIy-5EemExtAaCwr-_A _G6IwJS-5EemExtAaCwr-_A _G6IwJC-5EemExtAaCwr-_A _KO3QRC-5EemExtAaCwr-_A _KO3QRi-5EemExtAaCwr-_A _KO3QRS-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_6rGAZC-4EemExtAaCwr-_A" name="Operation_1_sender" covered="_mZnEMS-4EemExtAaCwr-_A" message="_6rGAYS-4EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_6rGAZS-4EemExtAaCwr-_A" name="Operation_1_receiver" covered="_tnBtIS-4EemExtAaCwr-_A" message="_6rGAYS-4EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_6rGncC-4EemExtAaCwr-_A" name="Introduce dni" covered="_tnBtIS-4EemExtAaCwr-_A" finish="_6rGAZi-4EemExtAaCwr-_A" start="_6rGAZS-4EemExtAaCwr-_A" behavior="_6rGAYi-4EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_6rGAZi-4EemExtAaCwr-_A" name="Operation_1_reply_sender" covered="_tnBtIS-4EemExtAaCwr-_A" message="_6rGAYy-4EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_6rGncS-4EemExtAaCwr-_A" name="Operation_1_reply_receiver" covered="_mZnEMS-4EemExtAaCwr-_A" message="_6rGAYy-4EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_8bm7xC-4EemExtAaCwr-_A" name="Operation_2_sender" covered="_mZnEMS-4EemExtAaCwr-_A" message="_8bm7wS-4EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_8bm7xS-4EemExtAaCwr-_A" name="Operation_2_receiver" covered="_tnBtIS-4EemExtAaCwr-_A" message="_8bm7wS-4EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_8bm7xy-4EemExtAaCwr-_A" name="Introduce codigo_aula" covered="_tnBtIS-4EemExtAaCwr-_A" finish="_8bm7xi-4EemExtAaCwr-_A" start="_8bm7xS-4EemExtAaCwr-_A" behavior="_8bm7wi-4EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_8bm7xi-4EemExtAaCwr-_A" name="Operation_2_reply_sender" covered="_tnBtIS-4EemExtAaCwr-_A" message="_8bm7wy-4EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_8bm7yC-4EemExtAaCwr-_A" name="Operation_2_reply_receiver" covered="_mZnEMS-4EemExtAaCwr-_A" message="_8bm7wy-4EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_DUYKYy-5EemExtAaCwr-_A" name="getDNI_sender" covered="_tnBtIS-4EemExtAaCwr-_A" message="_DUYKYC-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_DUYKZC-5EemExtAaCwr-_A" name="getDNI_receiver" covered="_1avhES-4EemExtAaCwr-_A" message="_DUYKYC-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_DUYKZi-5EemExtAaCwr-_A" name="getDNI" covered="_1avhES-4EemExtAaCwr-_A" finish="_DUYKZS-5EemExtAaCwr-_A" start="_DUYKZC-5EemExtAaCwr-_A" behavior="_DUYKYS-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_DUYKZS-5EemExtAaCwr-_A" name="getDNI_reply_sender" covered="_1avhES-4EemExtAaCwr-_A" message="_DUYKYi-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_DUYKZy-5EemExtAaCwr-_A" name="getDNI_reply_receiver" covered="_tnBtIS-4EemExtAaCwr-_A" message="_DUYKYi-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_G6IwIi-5EemExtAaCwr-_A" name="ocupada_sender" covered="_tnBtIS-4EemExtAaCwr-_A" message="_G6IJEC-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_G6IwIy-5EemExtAaCwr-_A" name="ocupada_receiver" covered="_FKk3AS-5EemExtAaCwr-_A" message="_G6IJEC-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_G6IwJS-5EemExtAaCwr-_A" name="ocupada" covered="_FKk3AS-5EemExtAaCwr-_A" finish="_G6IwJC-5EemExtAaCwr-_A" start="_G6IwIy-5EemExtAaCwr-_A" behavior="_G6IwIC-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_G6IwJC-5EemExtAaCwr-_A" name="ocupada_reply_sender" covered="_FKk3AS-5EemExtAaCwr-_A" message="_G6IwIS-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_G6IwJi-5EemExtAaCwr-_A" name="ocupada_reply_receiver" covered="_tnBtIS-4EemExtAaCwr-_A" message="_G6IwIS-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_KO3QQy-5EemExtAaCwr-_A" name="reservar_sender" covered="_tnBtIS-4EemExtAaCwr-_A" message="_KO3QQC-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_KO3QRC-5EemExtAaCwr-_A" name="reservar_receiver" covered="_FKk3AS-5EemExtAaCwr-_A" message="_KO3QQC-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_KO3QRi-5EemExtAaCwr-_A" name="reservar" covered="_FKk3AS-5EemExtAaCwr-_A" finish="_KO3QRS-5EemExtAaCwr-_A" start="_KO3QRC-5EemExtAaCwr-_A" behavior="_KO3QQS-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_KO3QRS-5EemExtAaCwr-_A" name="reservar_reply_sender" covered="_FKk3AS-5EemExtAaCwr-_A" message="_KO3QQi-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_KO3QRy-5EemExtAaCwr-_A" name="reservar_reply_receiver" covered="_tnBtIS-4EemExtAaCwr-_A" message="_KO3QQi-5EemExtAaCwr-_A"/>
+    <message xmi:id="_6rGAYS-4EemExtAaCwr-_A" name="Operation_1" receiveEvent="_6rGAZS-4EemExtAaCwr-_A" sendEvent="_6rGAZC-4EemExtAaCwr-_A" signature="_6rGAYC-4EemExtAaCwr-_A"/>
+    <message xmi:id="_6rGAYy-4EemExtAaCwr-_A" name="Operation_1_reply" messageSort="reply" receiveEvent="_6rGncS-4EemExtAaCwr-_A" sendEvent="_6rGAZi-4EemExtAaCwr-_A"/>
+    <message xmi:id="_8bm7wS-4EemExtAaCwr-_A" name="Operation_2" receiveEvent="_8bm7xS-4EemExtAaCwr-_A" sendEvent="_8bm7xC-4EemExtAaCwr-_A" signature="_8bm7wC-4EemExtAaCwr-_A"/>
+    <message xmi:id="_8bm7wy-4EemExtAaCwr-_A" name="Operation_2_reply" messageSort="reply" receiveEvent="_8bm7yC-4EemExtAaCwr-_A" sendEvent="_8bm7xi-4EemExtAaCwr-_A"/>
+    <message xmi:id="_DUYKYC-5EemExtAaCwr-_A" name="getDNI" receiveEvent="_DUYKZC-5EemExtAaCwr-_A" sendEvent="_DUYKYy-5EemExtAaCwr-_A" signature="_JQKo0C-4EemExtAaCwr-_A"/>
+    <message xmi:id="_DUYKYi-5EemExtAaCwr-_A" name="getDNI_reply" messageSort="reply" receiveEvent="_DUYKZy-5EemExtAaCwr-_A" sendEvent="_DUYKZS-5EemExtAaCwr-_A"/>
+    <message xmi:id="_G6IJEC-5EemExtAaCwr-_A" name="ocupada" receiveEvent="_G6IwIy-5EemExtAaCwr-_A" sendEvent="_G6IwIi-5EemExtAaCwr-_A" signature="_17mn4C-3EemExtAaCwr-_A"/>
+    <message xmi:id="_G6IwIS-5EemExtAaCwr-_A" name="ocupada_reply" messageSort="reply" receiveEvent="_G6IwJi-5EemExtAaCwr-_A" sendEvent="_G6IwJC-5EemExtAaCwr-_A"/>
+    <message xmi:id="_KO3QQC-5EemExtAaCwr-_A" name="reservar" receiveEvent="_KO3QRC-5EemExtAaCwr-_A" sendEvent="_KO3QQy-5EemExtAaCwr-_A" signature="_2L_0UC-3EemExtAaCwr-_A"/>
+    <message xmi:id="_KO3QQi-5EemExtAaCwr-_A" name="reservar_reply" messageSort="reply" receiveEvent="_KO3QRy-5EemExtAaCwr-_A" sendEvent="_KO3QRS-5EemExtAaCwr-_A"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_tnBtIC-4EemExtAaCwr-_A" name="Sistema"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_xOSHsC-4EemExtAaCwr-_A" name="Interfaz ">
+    <ownedOperation xmi:id="_6rGAYC-4EemExtAaCwr-_A" name="Operation_1"/>
+    <ownedOperation xmi:id="_8bm7wC-4EemExtAaCwr-_A" name="Operation_2"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_jt098C-5EemExtAaCwr-_A" name="NewModel">
+    <ownedAttribute xmi:id="_k3QrMC-5EemExtAaCwr-_A" name="Profesor" type="_UBbzAC-4EemExtAaCwr-_A"/>
+    <ownedAttribute xmi:id="_lde9sC-5EemExtAaCwr-_A" name="Sistema" type="_tnBtIC-4EemExtAaCwr-_A"/>
+    <ownedAttribute xmi:id="_mIDksC-5EemExtAaCwr-_A" name="Profesor" type="_h0yDkC-3EemExtAaCwr-_A"/>
+    <ownedAttribute xmi:id="_nd26AC-5EemExtAaCwr-_A" name="Reserva" type="_rqT-QC-3EemExtAaCwr-_A"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_pDtdgS-5EemExtAaCwr-_A" name="Message_0"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_qaj7sS-5EemExtAaCwr-_A" name="Message_2"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_sUwXgS-5EemExtAaCwr-_A" name="getDNI"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_t74GUS-5EemExtAaCwr-_A" name="ocupada"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_wwVK8S-5EemExtAaCwr-_A" name="Message_8"/>
+    <lifeline xmi:id="_k3QrMS-5EemExtAaCwr-_A" name="Profesor" represents="_k3QrMC-5EemExtAaCwr-_A" coveredBy="_pDuEkS-5EemExtAaCwr-_A _pDuElS-5EemExtAaCwr-_A _qaj7sy-5EemExtAaCwr-_A _qaj7ty-5EemExtAaCwr-_A _wwVK9C-5EemExtAaCwr-_A _wwVK9i-5EemExtAaCwr-_A _wwVK9S-5EemExtAaCwr-_A"/>
+    <lifeline xmi:id="_lde9sS-5EemExtAaCwr-_A" name="Sistema" represents="_lde9sC-5EemExtAaCwr-_A" coveredBy="_pDuEki-5EemExtAaCwr-_A _pDuElC-5EemExtAaCwr-_A _pDuEky-5EemExtAaCwr-_A _qaj7tC-5EemExtAaCwr-_A _qaj7ti-5EemExtAaCwr-_A _qaj7tS-5EemExtAaCwr-_A _sUwXgy-5EemExtAaCwr-_A _sUwXhy-5EemExtAaCwr-_A _t74GUy-5EemExtAaCwr-_A _t74GVy-5EemExtAaCwr-_A _wwVK8y-5EemExtAaCwr-_A _wwVK9y-5EemExtAaCwr-_A"/>
+    <lifeline xmi:id="_mIDksS-5EemExtAaCwr-_A" name="Profesor" represents="_mIDksC-5EemExtAaCwr-_A" coveredBy="_sUwXhC-5EemExtAaCwr-_A _sUwXhi-5EemExtAaCwr-_A _sUwXhS-5EemExtAaCwr-_A"/>
+    <lifeline xmi:id="_nd26AS-5EemExtAaCwr-_A" name="Reserva" represents="_nd26AC-5EemExtAaCwr-_A" coveredBy="_t74GVC-5EemExtAaCwr-_A _t74GVi-5EemExtAaCwr-_A _t74GVS-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_pDuEkS-5EemExtAaCwr-_A" name="Message_0_sender" covered="_k3QrMS-5EemExtAaCwr-_A" message="_pDtdgC-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_pDuEki-5EemExtAaCwr-_A" name="Message_0_receiver" covered="_lde9sS-5EemExtAaCwr-_A" message="_pDtdgC-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_pDuElC-5EemExtAaCwr-_A" name="Introduce DNI" covered="_lde9sS-5EemExtAaCwr-_A" finish="_pDuEky-5EemExtAaCwr-_A" start="_pDuEki-5EemExtAaCwr-_A" behavior="_pDtdgS-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_pDuEky-5EemExtAaCwr-_A" name="Message_0_reply_sender" covered="_lde9sS-5EemExtAaCwr-_A" message="_pDuEkC-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_pDuElS-5EemExtAaCwr-_A" name="Message_0_reply_receiver" covered="_k3QrMS-5EemExtAaCwr-_A" message="_pDuEkC-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_qaj7sy-5EemExtAaCwr-_A" name="Message_2_sender" covered="_k3QrMS-5EemExtAaCwr-_A" message="_qaj7sC-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_qaj7tC-5EemExtAaCwr-_A" name="Message_2_receiver" covered="_lde9sS-5EemExtAaCwr-_A" message="_qaj7sC-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_qaj7ti-5EemExtAaCwr-_A" name="Introduce nombre" covered="_lde9sS-5EemExtAaCwr-_A" finish="_qaj7tS-5EemExtAaCwr-_A" start="_qaj7tC-5EemExtAaCwr-_A" behavior="_qaj7sS-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_qaj7tS-5EemExtAaCwr-_A" name="Message_2_reply_sender" covered="_lde9sS-5EemExtAaCwr-_A" message="_qaj7si-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_qaj7ty-5EemExtAaCwr-_A" name="Message_2_reply_receiver" covered="_k3QrMS-5EemExtAaCwr-_A" message="_qaj7si-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_sUwXgy-5EemExtAaCwr-_A" name="getDNI_sender" covered="_lde9sS-5EemExtAaCwr-_A" message="_sUwXgC-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_sUwXhC-5EemExtAaCwr-_A" name="getDNI_receiver" covered="_mIDksS-5EemExtAaCwr-_A" message="_sUwXgC-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_sUwXhi-5EemExtAaCwr-_A" name="getDNI" covered="_mIDksS-5EemExtAaCwr-_A" finish="_sUwXhS-5EemExtAaCwr-_A" start="_sUwXhC-5EemExtAaCwr-_A" behavior="_sUwXgS-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_sUwXhS-5EemExtAaCwr-_A" name="getDNI_reply_sender" covered="_mIDksS-5EemExtAaCwr-_A" message="_sUwXgi-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_sUwXhy-5EemExtAaCwr-_A" name="getDNI_reply_receiver" covered="_lde9sS-5EemExtAaCwr-_A" message="_sUwXgi-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_t74GUy-5EemExtAaCwr-_A" name="ocupada_sender" covered="_lde9sS-5EemExtAaCwr-_A" message="_t74GUC-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_t74GVC-5EemExtAaCwr-_A" name="ocupada_receiver" covered="_nd26AS-5EemExtAaCwr-_A" message="_t74GUC-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_t74GVi-5EemExtAaCwr-_A" name="ocupada" covered="_nd26AS-5EemExtAaCwr-_A" finish="_t74GVS-5EemExtAaCwr-_A" start="_t74GVC-5EemExtAaCwr-_A" behavior="_t74GUS-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_t74GVS-5EemExtAaCwr-_A" name="ocupada_reply_sender" covered="_nd26AS-5EemExtAaCwr-_A" message="_t74GUi-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_t74GVy-5EemExtAaCwr-_A" name="ocupada_reply_receiver" covered="_lde9sS-5EemExtAaCwr-_A" message="_t74GUi-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_wwVK8y-5EemExtAaCwr-_A" name="Message_8_sender" covered="_lde9sS-5EemExtAaCwr-_A" message="_wwVK8C-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_wwVK9C-5EemExtAaCwr-_A" name="Message_8_receiver" covered="_k3QrMS-5EemExtAaCwr-_A" message="_wwVK8C-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_wwVK9i-5EemExtAaCwr-_A" name="Cancelar operacion" covered="_k3QrMS-5EemExtAaCwr-_A" finish="_wwVK9S-5EemExtAaCwr-_A" start="_wwVK9C-5EemExtAaCwr-_A" behavior="_wwVK8S-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_wwVK9S-5EemExtAaCwr-_A" name="Message_8_reply_sender" covered="_k3QrMS-5EemExtAaCwr-_A" message="_wwVK8i-5EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_wwVK9y-5EemExtAaCwr-_A" name="Message_8_reply_receiver" covered="_lde9sS-5EemExtAaCwr-_A" message="_wwVK8i-5EemExtAaCwr-_A"/>
+    <message xmi:id="_pDtdgC-5EemExtAaCwr-_A" name="Message_0" receiveEvent="_pDuEki-5EemExtAaCwr-_A" sendEvent="_pDuEkS-5EemExtAaCwr-_A"/>
+    <message xmi:id="_pDuEkC-5EemExtAaCwr-_A" name="Message_0_reply" messageSort="reply" receiveEvent="_pDuElS-5EemExtAaCwr-_A" sendEvent="_pDuEky-5EemExtAaCwr-_A"/>
+    <message xmi:id="_qaj7sC-5EemExtAaCwr-_A" name="Message_2" receiveEvent="_qaj7tC-5EemExtAaCwr-_A" sendEvent="_qaj7sy-5EemExtAaCwr-_A"/>
+    <message xmi:id="_qaj7si-5EemExtAaCwr-_A" name="Message_2_reply" messageSort="reply" receiveEvent="_qaj7ty-5EemExtAaCwr-_A" sendEvent="_qaj7tS-5EemExtAaCwr-_A"/>
+    <message xmi:id="_sUwXgC-5EemExtAaCwr-_A" name="getDNI" receiveEvent="_sUwXhC-5EemExtAaCwr-_A" sendEvent="_sUwXgy-5EemExtAaCwr-_A" signature="_JQKo0C-4EemExtAaCwr-_A"/>
+    <message xmi:id="_sUwXgi-5EemExtAaCwr-_A" name="getDNI_reply" messageSort="reply" receiveEvent="_sUwXhy-5EemExtAaCwr-_A" sendEvent="_sUwXhS-5EemExtAaCwr-_A"/>
+    <message xmi:id="_t74GUC-5EemExtAaCwr-_A" name="ocupada" receiveEvent="_t74GVC-5EemExtAaCwr-_A" sendEvent="_t74GUy-5EemExtAaCwr-_A" signature="_17mn4C-3EemExtAaCwr-_A"/>
+    <message xmi:id="_t74GUi-5EemExtAaCwr-_A" name="ocupada_reply" messageSort="reply" receiveEvent="_t74GVy-5EemExtAaCwr-_A" sendEvent="_t74GVS-5EemExtAaCwr-_A"/>
+    <message xmi:id="_wwVK8C-5EemExtAaCwr-_A" name="Message_8" receiveEvent="_wwVK9C-5EemExtAaCwr-_A" sendEvent="_wwVK8y-5EemExtAaCwr-_A"/>
+    <message xmi:id="_wwVK8i-5EemExtAaCwr-_A" name="Message_8_reply" messageSort="reply" receiveEvent="_wwVK9y-5EemExtAaCwr-_A" sendEvent="_wwVK9S-5EemExtAaCwr-_A"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_RBI_4C-6EemExtAaCwr-_A" name="NewModel">
+    <ownedAttribute xmi:id="_R8hDAC-6EemExtAaCwr-_A" name="Profesor" type="_UBbzAC-4EemExtAaCwr-_A"/>
+    <ownedAttribute xmi:id="_SfsokC-6EemExtAaCwr-_A" name="Sistema" type="_tnBtIC-4EemExtAaCwr-_A"/>
+    <ownedAttribute xmi:id="_Tw05QC-6EemExtAaCwr-_A" name="Profesor" type="_h0yDkC-3EemExtAaCwr-_A"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Uy7PcS-6EemExtAaCwr-_A" name="Message_0"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WF-ywC-6EemExtAaCwr-_A" name="Message_2"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_YchMUS-6EemExtAaCwr-_A" name="getDNI"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Y_R7IS-6EemExtAaCwr-_A" name="Message_6"/>
+    <lifeline xmi:id="_R8hDAS-6EemExtAaCwr-_A" name="Profesor" represents="_R8hDAC-6EemExtAaCwr-_A" coveredBy="_Uy7Pcy-6EemExtAaCwr-_A _Uy72gy-6EemExtAaCwr-_A _WF-ywi-6EemExtAaCwr-_A _WF-yxi-6EemExtAaCwr-_A _Y_R7JC-6EemExtAaCwr-_A _Y_R7Ji-6EemExtAaCwr-_A _Y_R7JS-6EemExtAaCwr-_A"/>
+    <lifeline xmi:id="_SfsokS-6EemExtAaCwr-_A" name="Sistema" represents="_SfsokC-6EemExtAaCwr-_A" coveredBy="_Uy72gC-6EemExtAaCwr-_A _Uy72gi-6EemExtAaCwr-_A _Uy72gS-6EemExtAaCwr-_A _WF-ywy-6EemExtAaCwr-_A _WF-yxS-6EemExtAaCwr-_A _WF-yxC-6EemExtAaCwr-_A _YchMUy-6EemExtAaCwr-_A _YchMVy-6EemExtAaCwr-_A _Y_R7Iy-6EemExtAaCwr-_A _Y_R7Jy-6EemExtAaCwr-_A"/>
+    <lifeline xmi:id="_Tw1gUC-6EemExtAaCwr-_A" name="Profesor" represents="_Tw05QC-6EemExtAaCwr-_A" coveredBy="_YchMVC-6EemExtAaCwr-_A _YchMVi-6EemExtAaCwr-_A _YchMVS-6EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Uy7Pcy-6EemExtAaCwr-_A" name="Message_0_sender" covered="_R8hDAS-6EemExtAaCwr-_A" message="_Uy7PcC-6EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Uy72gC-6EemExtAaCwr-_A" name="Message_0_receiver" covered="_SfsokS-6EemExtAaCwr-_A" message="_Uy7PcC-6EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_Uy72gi-6EemExtAaCwr-_A" name="Introducir DNI" covered="_SfsokS-6EemExtAaCwr-_A" finish="_Uy72gS-6EemExtAaCwr-_A" start="_Uy72gC-6EemExtAaCwr-_A" behavior="_Uy7PcS-6EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Uy72gS-6EemExtAaCwr-_A" name="Message_0_reply_sender" covered="_SfsokS-6EemExtAaCwr-_A" message="_Uy7Pci-6EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Uy72gy-6EemExtAaCwr-_A" name="Message_0_reply_receiver" covered="_R8hDAS-6EemExtAaCwr-_A" message="_Uy7Pci-6EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_WF-ywi-6EemExtAaCwr-_A" name="Message_2_sender" covered="_R8hDAS-6EemExtAaCwr-_A" message="_WF-LsC-6EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_WF-ywy-6EemExtAaCwr-_A" name="Message_2_receiver" covered="_SfsokS-6EemExtAaCwr-_A" message="_WF-LsC-6EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_WF-yxS-6EemExtAaCwr-_A" name="Introducir nombre" covered="_SfsokS-6EemExtAaCwr-_A" finish="_WF-yxC-6EemExtAaCwr-_A" start="_WF-ywy-6EemExtAaCwr-_A" behavior="_WF-ywC-6EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_WF-yxC-6EemExtAaCwr-_A" name="Message_2_reply_sender" covered="_SfsokS-6EemExtAaCwr-_A" message="_WF-ywS-6EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_WF-yxi-6EemExtAaCwr-_A" name="Message_2_reply_receiver" covered="_R8hDAS-6EemExtAaCwr-_A" message="_WF-ywS-6EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_YchMUy-6EemExtAaCwr-_A" name="getDNI_sender" covered="_SfsokS-6EemExtAaCwr-_A" message="_YchMUC-6EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_YchMVC-6EemExtAaCwr-_A" name="getDNI_receiver" covered="_Tw1gUC-6EemExtAaCwr-_A" message="_YchMUC-6EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_YchMVi-6EemExtAaCwr-_A" name="getDNI" covered="_Tw1gUC-6EemExtAaCwr-_A" finish="_YchMVS-6EemExtAaCwr-_A" start="_YchMVC-6EemExtAaCwr-_A" behavior="_YchMUS-6EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_YchMVS-6EemExtAaCwr-_A" name="getDNI_reply_sender" covered="_Tw1gUC-6EemExtAaCwr-_A" message="_YchMUi-6EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_YchMVy-6EemExtAaCwr-_A" name="getDNI_reply_receiver" covered="_SfsokS-6EemExtAaCwr-_A" message="_YchMUi-6EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Y_R7Iy-6EemExtAaCwr-_A" name="Message_6_sender" covered="_SfsokS-6EemExtAaCwr-_A" message="_Y_R7IC-6EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Y_R7JC-6EemExtAaCwr-_A" name="Message_6_receiver" covered="_R8hDAS-6EemExtAaCwr-_A" message="_Y_R7IC-6EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_Y_R7Ji-6EemExtAaCwr-_A" name="Cancelar reserva" covered="_R8hDAS-6EemExtAaCwr-_A" finish="_Y_R7JS-6EemExtAaCwr-_A" start="_Y_R7JC-6EemExtAaCwr-_A" behavior="_Y_R7IS-6EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Y_R7JS-6EemExtAaCwr-_A" name="Message_6_reply_sender" covered="_R8hDAS-6EemExtAaCwr-_A" message="_Y_R7Ii-6EemExtAaCwr-_A"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Y_R7Jy-6EemExtAaCwr-_A" name="Message_6_reply_receiver" covered="_SfsokS-6EemExtAaCwr-_A" message="_Y_R7Ii-6EemExtAaCwr-_A"/>
+    <message xmi:id="_Uy7PcC-6EemExtAaCwr-_A" name="Message_0" receiveEvent="_Uy72gC-6EemExtAaCwr-_A" sendEvent="_Uy7Pcy-6EemExtAaCwr-_A"/>
+    <message xmi:id="_Uy7Pci-6EemExtAaCwr-_A" name="Message_0_reply" messageSort="reply" receiveEvent="_Uy72gy-6EemExtAaCwr-_A" sendEvent="_Uy72gS-6EemExtAaCwr-_A"/>
+    <message xmi:id="_WF-LsC-6EemExtAaCwr-_A" name="Message_2" receiveEvent="_WF-ywy-6EemExtAaCwr-_A" sendEvent="_WF-ywi-6EemExtAaCwr-_A"/>
+    <message xmi:id="_WF-ywS-6EemExtAaCwr-_A" name="Message_2_reply" messageSort="reply" receiveEvent="_WF-yxi-6EemExtAaCwr-_A" sendEvent="_WF-yxC-6EemExtAaCwr-_A"/>
+    <message xmi:id="_YchMUC-6EemExtAaCwr-_A" name="getDNI" receiveEvent="_YchMVC-6EemExtAaCwr-_A" sendEvent="_YchMUy-6EemExtAaCwr-_A" signature="_JQKo0C-4EemExtAaCwr-_A"/>
+    <message xmi:id="_YchMUi-6EemExtAaCwr-_A" name="getDNI_reply" messageSort="reply" receiveEvent="_YchMVy-6EemExtAaCwr-_A" sendEvent="_YchMVS-6EemExtAaCwr-_A"/>
+    <message xmi:id="_Y_R7IC-6EemExtAaCwr-_A" name="Message_6" receiveEvent="_Y_R7JC-6EemExtAaCwr-_A" sendEvent="_Y_R7Iy-6EemExtAaCwr-_A"/>
+    <message xmi:id="_Y_R7Ii-6EemExtAaCwr-_A" name="Message_6_reply" messageSort="reply" receiveEvent="_Y_R7Jy-6EemExtAaCwr-_A" sendEvent="_Y_R7JS-6EemExtAaCwr-_A"/>
+  </packagedElement>
+</uml:Model>
