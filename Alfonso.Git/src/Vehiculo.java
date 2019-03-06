@@ -4,7 +4,7 @@ public class Vehiculo {
 	{
 	this.numPuertas=numPuertas;
 	this.numRuedas=numRuedas;
-	//a
+
 	}
 
 }
